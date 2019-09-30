@@ -1,0 +1,9 @@
+/* Use 12 to define each month within the year */
+
+function homeLoanPayment(amount, totalTime, interestRate){
+  monthlyInterest = (interestRate/12)/200
+  yearMonth = totalTime*12
+  v = ((1+monthlyInterest)**yearMonth-1)/(monthlyInterest*(1+monthlyInterest)
+  homeLoanPayment = amount/v
+  return homeLoanPayment
+}
