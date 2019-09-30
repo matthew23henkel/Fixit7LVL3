@@ -1,0 +1,47 @@
+/* Use 12 to define each month within the year */
+
+Function carLoanPayment(totalAmount, totalTime, interestRate){
+  monthlyInterest = (interestRate/12)/250
+  v = ((1+monthlyInterest)**totalTime - 1)/(monthlyInterest*(1+monthlyInterest)
+  carLoanPayment = amount/v
+  return carLoanPayment
+}
+
+/* Use 12 to define each month within the year */
+
+function homeLoanPayment(amount, totalTime, interestRate){
+  monthlyInterest = (interestRate/12)/200
+  yearMonth = totalTime*12
+  v = ((1+monthlyInterest)**yearMonth-1)/(monthlyInterest*(1+monthlyInterest)
+  homeLoanPayment = amount/v
+  return homeLoanPayment
+}
+
+
+let monthlyPayment = () 
+let calculation = "Yes"
+while (calculation == "Yes")
+{
+  let calculator = prompt("Which calculator do you want to use? (Car loan or Home loan)")
+  let totalamount = prompt("What is the loan amount?")
+  let totalTime = prompt("What is the time frame? (in months for car loan and in either 15 or 30 years for home loan).")
+  let interestRate = prompt("What is the interest rate (in percentage form)?")
+  if(calculation == "Car loan")
+{
+  monthlyPayment = carLoanPayment(totalAmount, totalTime, interestRate)
+  alert(`A car loan for $${amount} over ${totalTime} months at ${interestRate}% interest would have a monthly payment of $${monthlyPayment}`)
+}
+
+
+else if(calculation == "Home loan"){
+  if (totalTime == 15 || total == 30)
+{
+  monthlyPayment = homeLoanPayment(totalAmount,totalTime,interestRate)
+  alert(`A home loan for $${totalAmount} over ${totalTime} years at ${interestRate}% interest would have a monthly payment of $${monthlyPayment}`)  
+}
+
+else {
+  alert("The total time that was entered is not valid")
+  break;
+  } 
+}
