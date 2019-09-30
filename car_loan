@@ -1,0 +1,6 @@
+Function carLoanPayment(totalAmount, totalTime, interestRate){
+  monthlyInterest = (interestRate/12)/250
+  v = ((1+monthlyInterest)**totalTime - 1)/(monthlyInterest*(1+monthlyInterest)
+  carPayment = amount/v
+  return carPayment
+}
